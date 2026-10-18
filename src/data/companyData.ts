@@ -1,11 +1,10 @@
 import type { NavItem, ServiceItem, PortfolioItem, TeamMember, StatItem, TestimonialItem } from '../types'
 
 export const navItems: NavItem[] = [
-  { label: 'Beranda', path: '#hero' },
-  { label: 'Tentang Kami', path: '#about' },
-  { label: 'Layanan', path: '#services' },
-  { label: 'Portofolio', path: '#portfolio' },
-  { label: 'Kontak', path: '#contact' },
+  { label: 'About', path: '#about' },
+  { label: 'Portfolio', path: '#portfolio' },
+  { label: 'Services', path: '#services' },
+  { label: 'Contact', path: '#contact' },
 ]
 
 export const heroData = {
@@ -15,13 +14,14 @@ export const heroData = {
     'Kami memadukan estetika, fungsionalitas, dan jiwa ke dalam interior yang abadi — dirancang khusus untuk meningkatkan cara Anda hidup, merasakan, dan terhubung dengan ruang Anda.',
   primaryCta: {
     label: "Konsultasi Sekarang",
-    path: '/contact',
+    path: '#contact',
   },
   secondaryCta: {
     label: 'Lihat Portofolio',
-    path: '/portfolio',
+    path: '#portfolio',
   },
   heroImage: '/images/hero_interior.jpg',
+  heroVideo: '/footage-interior.mp4',
   floatingBadge: {
     label: 'Selected Residence',
     subtitle: 'Contemporary Warm Minimalist',

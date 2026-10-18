@@ -1,6 +1,7 @@
 import Navbar from './components/common/Navbar'
 import Footer from './components/common/Footer'
-import HeroSection from './components/hero/HeroSection'
+import HeroSection from './components/sections/HeroSection'
+import AboutSection from './components/sections/AboutSection'
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <Navbar />
       <main className="grow">
         <HeroSection />
+        <AboutSection />
       </main>
       <Footer />
     </div>
