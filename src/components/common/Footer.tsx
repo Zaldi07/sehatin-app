@@ -1,11 +1,13 @@
 import React from 'react'
-import { ArrowUpRight, Mail, Phone, MapPin, Heart} from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { ArrowUpRight, Mail, Phone, MapPin, Heart } from 'lucide-react'
 import { companyOverview, navItems } from '../../data/companyData'
 import brandLogoLight from '../../../public/brandLogoLight.svg'
 // footer halaman berisi informasi kontak dan navigasi
 export const Footer: React.FC = () => {
+
   return (
-    <footer className="bg-primary text-charcoal pt-12 sm:pt-16 pb-8 sm:pb-12 mt-14 sm:mt-20 ">
+    <footer className="bg-primary text-charcoal pt-12 sm:pt-16 pb-8 sm:pb-12 mt-14 sm:mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 pb-12 sm:pb-16 border-b border-white/10">
           <div className="sm:col-span-2 lg:col-span-5 flex flex-col justify-between">
@@ -50,7 +52,6 @@ export const Footer: React.FC = () => {
                   <circle cx="4" cy="4" r="2"/>
                 </svg>
               </a>
-            
             </div>
           </div>
 
@@ -61,12 +62,13 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2 sm:space-y-3">
               {navItems.map((item) => (
                 <li key={item.path}>
-                  <a
-                    href={item.path}
+                  <Link
+                    to={item.path}
+                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                     className="text-xs sm:text-sm text-white/70 hover:text-white hover:translate-x-1 inline-flex items-center gap-1 transition-all"
                   >
                     <span>{item.label}</span>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -102,13 +104,14 @@ export const Footer: React.FC = () => {
             </div>
 
             <div className="mt-5 sm:mt-6 pt-5 sm:pt-6 border-t border-white/10">
-              <a
-                href="#contact"
-                className="inline-flex items-center gap-2 text-xs font-semibold text-primary hover:text-white transition-colors"
+              <Link
+                to="/contact"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                className="inline-flex items-center gap-2 text-xs font-semibold text-white/90 hover:text-white transition-colors"
               >
                 <span>Mulai Konsultasi Desain</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

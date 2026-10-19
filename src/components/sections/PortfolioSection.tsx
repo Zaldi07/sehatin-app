@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react'
+import { Link } from 'react-router-dom'
 import { motion, AnimatePresence, useScroll, useTransform, useSpring, type Variants } from 'framer-motion'
 import { ChevronLeft, ChevronRight, ArrowUpRight } from 'lucide-react'
 import { portfolioData } from '../../data/companyData'
@@ -210,7 +211,7 @@ export const PortfolioSection: React.FC = () => {
               >
                 <div className="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 md:gap-6 pointer-events-auto">
                   <div className="inline-flex items-center gap-2.5 sm:gap-3 px-3.5 sm:px-4 md:px-5 py-2 sm:py-2.5 rounded-full bg-primary backdrop-blur-md border border-none text-white shadow-xl self-start sm:self-auto max-w-full">
-                    <span className="text-sm text-white sm:text-xs font-mono  font-bold tracking-wider shrink-0">
+                    <span className="text-sm text-white sm:text-xs font-mono font-bold tracking-wider shrink-0">
                       0{currentIndex + 1} / 0{portfolioData.length}
                     </span>
                     <span className="text-white/30 shrink-0">|</span>
@@ -222,15 +223,23 @@ export const PortfolioSection: React.FC = () => {
                         ( {currentProject.location})
                       </span>
                     )}
+                    <Link
+                      to={`/portfolio/${currentProject.id}`}
+                      className="hidden sm:inline-flex items-center gap-1 text-[11px] sm:text-xs font-medium text-white/90 hover:text-white bg-white/15 hover:bg-white/25 px-2.5 py-0.5 rounded-full transition-all shrink-0 ml-1.5"
+                      title="Lihat Detail Proyek Ini"
+                    >
+                      <span>Detail</span>
+                      <ArrowUpRight className="w-3 h-3" />
+                    </Link>
                   </div>
 
-                  <a
-                    href="#contact"
-                    className="group inline-flex items-center justify-center gap-2 sm:gap-2.5 px-5 sm:px-6 md:px-7 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-semibold bg-primary hover:bg-primary-dark text-white shadow-xl  transition-all duration-300  active:scale-95 self-start sm:self-auto shrink-0"
+                  <Link
+                    to="/portfolio"
+                    className="group inline-flex items-center justify-center gap-2 sm:gap-2.5 px-5 sm:px-6 md:px-7 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-semibold bg-primary hover:bg-primary-dark text-white shadow-xl transition-all duration-300 active:scale-95 self-start sm:self-auto shrink-0 cursor-pointer"
                   >
                     <span>See More Our Portfolio</span>
                     <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                  </a>
+                  </Link>
                 </div>
               </motion.div>
             </motion.div>

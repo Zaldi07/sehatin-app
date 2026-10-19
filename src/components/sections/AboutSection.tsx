@@ -1,4 +1,5 @@
 import React, { useRef } from 'react'
+import { Link } from 'react-router-dom'
 import { motion, useScroll, useTransform, useSpring, type MotionValue } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react'
 import { companyOverview } from '../../data/companyData'
@@ -133,19 +134,19 @@ export const AboutSection: React.FC = () => {
             }}
             className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full max-w-sm sm:max-w-none mx-auto"
           >
-            <a
-              href="#portfolio"
-              className="group inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full text-xs sm:text-sm font-semibold bg-primary text-canvas hover:bg-primary transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 w-full sm:w-64 md:w-72 text-center whitespace-nowrap"
+            <Link
+              to="/about"
+              className="group inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full text-xs sm:text-sm font-semibold bg-primary text-canvas hover:bg-primary-dark transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 w-full sm:w-64 md:w-72 text-center whitespace-nowrap"
             >
-              <span>Eksplorasi Portofolio Kami</span>
+              <span>Pelajari Profil & Tim Kami</span>
               <ArrowUpRight className="w-4 h-4 shrink-0 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </a>
-            <a
-              href="#contact"
+            </Link>
+            <Link
+              to="/portfolio"
               className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full text-xs sm:text-sm font-semibold border border-charcoal/20 text-charcoal hover:border-charcoal hover:bg-charcoal/5 transition-all duration-300 w-full sm:w-64 md:w-72 text-center whitespace-nowrap"
             >
-              <span>Konsultasi Proyek</span>
-            </a>
+              <span>Eksplorasi Portofolio</span>
+            </Link>
           </motion.div>
         </div>
       </div>
