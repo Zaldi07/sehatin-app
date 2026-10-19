@@ -3,7 +3,7 @@ import { motion, AnimatePresence, useScroll, useTransform, useSpring, type Varia
 import { ChevronLeft, ChevronRight, ArrowUpRight } from 'lucide-react'
 import { portfolioData } from '../../data/companyData'
 
-// komponen utama portofolio dengan efek scroll membesar dan slider proyek
+
 export const PortfolioSection: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null)
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -146,9 +146,8 @@ export const PortfolioSection: React.FC = () => {
                     paginate(-1)
                   }
                 }}
-                className={`absolute inset-0 w-full h-full select-none ${
-                  hasExpanded ? 'cursor-grab active:cursor-grabbing' : 'cursor-default'
-                }`}
+                className={`absolute inset-0 w-full h-full select-none ${hasExpanded ? 'active:cursor-grabbing' : 'cursor-default'
+                  }`}
               >
                 <motion.img
                   src={currentProject.image}
@@ -160,8 +159,8 @@ export const PortfolioSection: React.FC = () => {
                   loading="eager"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/25 to-transparent pointer-events-none" />
-                <div className="absolute inset-0 bg-gradient-to-b from-charcoal/75 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute inset-0 bg-linear-to-t from-charcoal/90 via-charcoal/25 to-transparent pointer-events-none" />
+                <div className="absolute inset-0 bg-linear-to-b from-charcoal/75 via-transparent to-transparent pointer-events-none" />
               </motion.div>
             </AnimatePresence>
 
@@ -180,7 +179,7 @@ export const PortfolioSection: React.FC = () => {
                   <div className="pointer-events-auto max-w-xl lg:max-w-2xl">
                     <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold font-display text-white tracking-tight drop-shadow-md leading-[1.2] sm:leading-[1.15]">
                       Ruang Bermakna yang{' '}
-                      <span className="text-secondary italic font-serif">Telah Kami Wujudkan.</span>
+                      <span className="text-secondary italic">Telah Kami Wujudkan.</span>
                     </h2>
                   </div>
 
@@ -189,7 +188,7 @@ export const PortfolioSection: React.FC = () => {
                       type="button"
                       onClick={() => paginate(-1)}
                       aria-label="Previous Project"
-                      className="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 rounded-full bg-charcoal/70 hover:bg-primary text-white backdrop-blur-md border border-white/20 hover:border-primary flex items-center justify-center transition-all duration-200 cursor-pointer shadow-lg hover:scale-105 active:scale-95"
+                      className="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 rounded-full bg-primary hover:bg-primary-dark text-white backdrop-blur-md border border-white/20 hover:border-primary flex items-center justify-center transition-all duration-200 cursor-pointer shadow-lg  active:scale-95"
                     >
                       <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
                     </button>
@@ -197,7 +196,7 @@ export const PortfolioSection: React.FC = () => {
                       type="button"
                       onClick={() => paginate(1)}
                       aria-label="Next Project"
-                      className="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 rounded-full bg-charcoal/70 hover:bg-primary text-white backdrop-blur-md border border-white/20 hover:border-primary flex items-center justify-center transition-all duration-200 cursor-pointer shadow-lg hover:scale-105 active:scale-95"
+                      className="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 rounded-full bg-primary hover:bg-primary-dark text-white backdrop-blur-md border border-white/20 hover:border-primary flex items-center justify-center transition-all duration-200 cursor-pointer shadow-lg active:scale-95"
                     >
                       <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
                     </button>
@@ -210,8 +209,8 @@ export const PortfolioSection: React.FC = () => {
                 className="w-full pb-6 sm:pb-8 md:pb-10 lg:pb-12 px-4 sm:px-6 md:px-8 lg:px-12 pointer-events-none"
               >
                 <div className="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 md:gap-6 pointer-events-auto">
-                  <div className="inline-flex items-center gap-2.5 sm:gap-3 px-3.5 sm:px-4 md:px-5 py-2 sm:py-2.5 rounded-full bg-charcoal/80 backdrop-blur-md border border-white/15 text-white shadow-xl self-start sm:self-auto max-w-full">
-                    <span className="text-[11px] sm:text-xs font-mono text-secondary font-bold tracking-wider shrink-0">
+                  <div className="inline-flex items-center gap-2.5 sm:gap-3 px-3.5 sm:px-4 md:px-5 py-2 sm:py-2.5 rounded-full bg-primary backdrop-blur-md border border-none text-white shadow-xl self-start sm:self-auto max-w-full">
+                    <span className="text-sm text-white sm:text-xs font-mono  font-bold tracking-wider shrink-0">
                       0{currentIndex + 1} / 0{portfolioData.length}
                     </span>
                     <span className="text-white/30 shrink-0">|</span>
@@ -219,15 +218,15 @@ export const PortfolioSection: React.FC = () => {
                       {currentProject.title}
                     </span>
                     {currentProject.location && (
-                      <span className="hidden md:inline text-xs text-white/60 truncate">
-                        — {currentProject.location}
+                      <span className="hidden md:inline text-sm text-white truncate">
+                        ( {currentProject.location})
                       </span>
                     )}
                   </div>
 
                   <a
                     href="#contact"
-                    className="group inline-flex items-center justify-center gap-2 sm:gap-2.5 px-5 sm:px-6 md:px-7 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-semibold bg-primary hover:bg-primary-dark text-white shadow-xl hover:shadow-primary/40 transition-all duration-300 hover:scale-105 active:scale-95 self-start sm:self-auto shrink-0"
+                    className="group inline-flex items-center justify-center gap-2 sm:gap-2.5 px-5 sm:px-6 md:px-7 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-semibold bg-primary hover:bg-primary-dark text-white shadow-xl  transition-all duration-300  active:scale-95 self-start sm:self-auto shrink-0"
                   >
                     <span>See More Our Portfolio</span>
                     <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

@@ -1,6 +1,7 @@
 import type { NavItem, ServiceItem, PortfolioItem, TeamMember, StatItem, TestimonialItem } from '../types'
 
 export const navItems: NavItem[] = [
+  {label: 'Home', path:'#home'},
   { label: 'About', path: '#about' },
   { label: 'Portfolio', path: '#portfolio' },
   { label: 'Services', path: '#services' },
@@ -130,7 +131,7 @@ export const testimonialsData: TestimonialItem[] = [
   {
     id: 'test-1',
     quote:
-      'Bekerja bersama Aurea Studio adalah pengalaman yang begitu tenang dan profesional. Mereka benar-benar mendengarkan visi keluarga kami dan mewujudkannya melampaui ekspektasi.',
+      'Bekerja bersama Hasuna Studio adalah pengalaman yang begitu tenang dan profesional. Mereka benar-benar mendengarkan visi keluarga kami dan mewujudkannya melampaui ekspektasi.',
     author: 'Widi Wibowo & Gita',
     role: 'Pemilik Hunian di Dago Pakar',
     avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80',
@@ -146,16 +147,16 @@ export const testimonialsData: TestimonialItem[] = [
 ]
 
 export const companyOverview = {
-  name: 'Aurea Studio',
+  name: 'Hasuna Studio',
   tagline: 'Timeless Spaces, Mindful Living',
   address: 'Jl. Ranggamalela No. 12, Dago, Bandung, Jawa Barat 40116',
-  email: 'hello@aureastudio.id',
+  email: 'hello@hasunastudio.id',
   phone: '+62 812 3456 7890',
   hours: 'Senin - Jumat: 09:00 - 18:00 WIB',
   socials: [
-    { name: 'Instagram', handle: '@aureastudio.id', url: 'https://instagram.com' },
-    { name: 'Pinterest', handle: 'aureastudiodesign', url: 'https://pinterest.com' },
-    { name: 'LinkedIn', handle: 'Aurea Studio Indonesia', url: 'https://linkedin.com' },
+    { name: 'Instagram', handle: '@hasunastudio.id', url: 'https://instagram.com' },
+    { name: 'Pinterest', handle: 'Hasunastudiodesign', url: 'https://pinterest.com' },
+    { name: 'LinkedIn', handle: 'Hasuna Studio Indonesia', url: 'https://linkedin.com' },
   ],
   vision: 'Menjadi biro desain interior dan spasial terdepan di Asia Tenggara yang mengedepankan keselarasan antara manusia, material lokal yang berkelanjutan, dan ketenangan ruang hidup.',
   mission: [
@@ -164,5 +165,5 @@ export const companyOverview = {
     'Memberikan pengalaman perancangan yang transparan, terukur, dan menyenangkan bagi setiap klien.',
   ],
   history:
-    'Didirikan pada tahun 2017 di Bandung, Aurea Studio berawal dari keyakinan sederhana: bahwa rumah dan ruang kerja seharusnya bukan sekadar penampung benda, melainkan tempat bernapas yang membentuk kualitas hidup kita. Selama lebih dari 8 tahun, kami telah dipercaya merancang lebih dari 120 ruang hunian dan komersial dengan pendekatan desain yang berjiwa dan hangat.',
+    'Didirikan pada tahun 2017 di Bandung, Hasuna Studio berawal dari keyakinan sederhana: bahwa rumah dan ruang kerja seharusnya bukan sekadar penampung benda, melainkan tempat bernapas yang membentuk kualitas hidup kita. Selama lebih dari 8 tahun, kami telah dipercaya merancang lebih dari 120 ruang hunian dan komersial dengan pendekatan desain yang berjiwa dan hangat.',
 }

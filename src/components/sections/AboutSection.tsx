@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { motion, useScroll, useTransform, useSpring, type MotionValue } from 'framer-motion'
-import { ArrowUpRight, Sparkles } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 import { companyOverview } from '../../data/companyData'
 
 interface RevealWordProps {
@@ -82,9 +82,9 @@ export const AboutSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full text-[11px] sm:text-xs font-semibold tracking-wide bg-secondary/20 text-charcoal border border-secondary/50 mb-4 sm:mb-6 shadow-xs"
+            className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full text-[11px] sm:text-xs font-semibold tracking-wide bg-primary text-white border border-secondary/50 mb-4 sm:mb-6 shadow-xs"
           >
-          
+
             <span>About Us</span>
           </motion.div>
 
@@ -105,7 +105,7 @@ export const AboutSection: React.FC = () => {
                   key={`h2-${i}`}
                   progress={smoothProgress}
                   range={getHeadingRange(fullIndex)}
-                  className="text-primary italic font-serif"
+                  className="text-primary italic"
                 >
                   {word}
                 </RevealWord>
@@ -131,18 +131,18 @@ export const AboutSection: React.FC = () => {
               y: buttonY,
               pointerEvents: buttonPointerEvents,
             }}
-            className="flex flex-wrap items-center justify-center gap-3 sm:gap-4"
+            className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full max-w-sm sm:max-w-none mx-auto"
           >
             <a
               href="#portfolio"
-              className="group inline-flex items-center gap-2.5 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full text-xs sm:text-sm font-semibold bg-charcoal text-canvas hover:bg-primary transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+              className="group inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full text-xs sm:text-sm font-semibold bg-primary text-canvas hover:bg-primary transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 w-full sm:w-64 md:w-72 text-center whitespace-nowrap"
             >
               <span>Eksplorasi Portofolio Kami</span>
-              <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              <ArrowUpRight className="w-4 h-4 shrink-0 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 px-5 sm:px-6 py-3 sm:py-3.5 rounded-full text-xs sm:text-sm font-semibold border border-charcoal/20 text-charcoal hover:border-charcoal hover:bg-charcoal/5 transition-all duration-300"
+              className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full text-xs sm:text-sm font-semibold border border-charcoal/20 text-charcoal hover:border-charcoal hover:bg-charcoal/5 transition-all duration-300 w-full sm:w-64 md:w-72 text-center whitespace-nowrap"
             >
               <span>Konsultasi Proyek</span>
             </a>
