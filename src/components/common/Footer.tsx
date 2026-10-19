@@ -2,6 +2,7 @@ import React from 'react'
 import { ArrowUpRight, Mail, Phone, MapPin, Globe } from 'lucide-react'
 import { companyOverview, navItems } from '../../data/companyData'
 
+// footer halaman berisi informasi kontak dan navigasi
 export const Footer: React.FC = () => {
   return (
     <footer className="bg-charcoal text-canvas pt-12 sm:pt-16 pb-8 sm:pb-12 mt-14 sm:mt-20 border-t border-black">

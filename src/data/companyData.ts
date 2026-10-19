@@ -91,6 +91,15 @@ export const portfolioData: PortfolioItem[] = [
     location: 'Bali',
     year: '2024',
   },
+  {
+    id: 'port-4',
+    title: 'Contemporary Minimalist Living',
+    category: 'Residential & Spatial',
+    description: 'Ruang keluarga terbuka dengan perpaduan pencahayaan alami, sirkulasi udara sejuk, dan kriya tenun lokal.',
+    image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1600&q=85',
+    location: 'Dago Pakar, Bandung',
+    year: '2025',
+  },
 ]
 
 export const teamData: TeamMember[] = [

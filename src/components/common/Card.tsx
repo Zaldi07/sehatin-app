@@ -8,6 +8,7 @@ export interface CardProps {
   onClick?: () => void
 }
 
+// pembungkus kartu serbaguna dengan pilihan variasi style
 export const Card: React.FC<CardProps> = ({
   children,
   className = '',
